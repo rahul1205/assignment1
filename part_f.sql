@@ -1,0 +1,2 @@
+select department.department_name, count(program.program_id) as number_of_program from program join department on program.Department_department_id=department.department_id where program.program_type='undergraduate' group by department_id order by number_of_program desc limit 1;
+select faculty.faculty_name, count(staff.professor_id) as number_of_staff from staff join faculty on staff.Faculty_faculty_id=faculty.faculty_id where staff.professor_last_name like 'A%' group by staff.Faculty_faculty_id order by number_of_staff desc limit 1;
